@@ -52,7 +52,7 @@ def worker(name,url,omxplayer_extra_options,coordinates,stopworker):
     signal.signal(signal.SIGTERM, signal_sigterm_handler)
 
     #Logger setup
-    logger = setup_logging( "logs/" + name + ".log",__name__)
+    logger = setup_logging( "/var/log/rpisurv/" + name + ".log",__name__)
     logger.debug("logger from " + name)
 
     #Start stream and watchdog

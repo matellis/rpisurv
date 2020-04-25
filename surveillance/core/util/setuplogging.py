@@ -6,7 +6,7 @@ import errno
 def setup_logging(logfilepath = None,loggername=None):
     #Create default logs directory
     try:
-        os.makedirs("logs")
+        os.makedirs("/var/logs/rpisurv")
     except OSError as exception:
         if exception.errno != errno.EEXIST:
             raise
